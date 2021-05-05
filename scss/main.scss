@@ -1,4 +1,13 @@
 @import "settings.global";
 @import "settings.colors";
+@import "generic.reset";
 
 @import "components.buttons";
+
+
+.buttonBlue{
+    @include createButton(#C1D5E0);
+}
+.buttonGreen{
+    @include createButton(#6EB45C);
+}

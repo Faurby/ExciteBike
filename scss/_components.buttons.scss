@@ -16,3 +16,20 @@
     }
 
 }
+
+@mixin createButton($maincolor){
+    
+        display: inline-block;
+        padding: (0.5 * $base-spacing-unit) $base-spacing-unit;
+        text-decoration: none;
+        background-color: $maincolor;
+        color: #fff;
+        border-radius: $base-radius;
+        transition: background-color 0.2s;
+    
+        &:hover,
+        &:focus {
+            background-color: darken($maincolor, 15%);
+            color: #fff;
+    }
+}
