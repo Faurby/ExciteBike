@@ -1,1 +1,15 @@
-.c-btn{display:inline-block;padding:12px 24px;text-decoration:none;background-color:#1d20db;color:#fff;border-radius:3px;transition:background-color 0.2s}.c-btn:hover,.c-btn:focus{background-color:#141697;color:#fff}
+.c-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  background-color: #ac6363;
+  color: #fff;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+.c-btn:hover, .c-btn:focus {
+  background-color: #7f4444;
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */
