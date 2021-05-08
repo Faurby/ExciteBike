@@ -1,13 +1,80 @@
 @import "settings.global";
 @import "settings.colors";
 @import "generic.reset";
+@import "tools.mixins";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 @import "components.buttons";
 
-
-.buttonBlue{
-    @include createButton(#C1D5E0);
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-.buttonGreen{
-    @include createButton(#6EB45C);
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.justifyCenter {
+    justify-content: center
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+}
+
+.main label {
+    font-size: $label-font-size;
+}
+
+.main input {
+    width: 70%;
+    margin: 1em;
+    padding: 0.5em 0.5em;
+    border-radius: $button-radius;
+    background-color: $color-background-darker;
+    font-size: $base-font-size;
+}
+
+.flexGrow1 {
+    flex-grow: 1;
+}
+
+.buttonGrey {
+    @include createButton($color-secondary, $color-secondary-shadow, $button-font-size);
+}
+
+.buttonGreen {
+    @include createButton($color-brand, $color-brand-shadow, $button-font-size);
+}
+
+.header {
+    background: linear-gradient(to bottom, $color-brand-darkest 25%, $color-brand-shadow 25%);
+    height: 11%;
+}
+//Spørg flyv om hjælp
+.headerimg {
+    width: 10em;
+    height: auto; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 1em;
+}
+
+.headerarrow {
+    position: relative;
+    padding-left: 2%;
+    top: 0.4em;
 }

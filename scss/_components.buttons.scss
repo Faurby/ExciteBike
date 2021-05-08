@@ -1,5 +1,3 @@
-
-
 .c-btn {
     display: inline-block;
     padding: (0.5 * $base-spacing-unit) $base-spacing-unit;
@@ -17,19 +15,17 @@
 
 }
 
-@mixin createButton($maincolor){
-    
-        display: inline-block;
-        padding: (0.5 * $base-spacing-unit) $base-spacing-unit;
-        text-decoration: none;
-        background-color: $maincolor;
-        color: #fff;
-        border-radius: $base-radius;
-        transition: background-color 0.2s;
-    
-        &:hover,
-        &:focus {
-            background-color: darken($maincolor, 15%);
-            color: #fff;
-    }
+%btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border-radius: $button-radius;
+    transition: background-color 0.2s;
+    width: 90%;
+    height: 2em;
+    line-height: 2em;
+    margin-bottom: 0.5em; 
+    font-family: $base-font;   
 }
+

@@ -1,0 +1,12 @@
+@mixin createButton($maincolor,  $hovercolor, $fontsize){
+    
+    @extend %btn;
+    background-color: $maincolor;
+    font-size: $fontsize;
+
+    &:hover,
+    &:focus {
+        background-color: $hovercolor;
+        color: #fff;
+    }
+}

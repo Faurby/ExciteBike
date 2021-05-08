@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,6 +21,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: "PT Sans";
   vertical-align: baseline;
 }
 
@@ -31,6 +33,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  height: 100vh;
+  background-color: #F3F3F3;
 }
 
 ol, ul {
@@ -56,42 +60,111 @@ table {
   display: inline-block;
   padding: 12px 24px;
   text-decoration: none;
-  background-color: #ac6363;
-  color: #fff;
-  border-radius: 3px;
-  transition: background-color 0.2s;
-}
-.c-btn:hover, .c-btn:focus {
-  background-color: #7f4444;
-  color: #fff;
-}
-
-.buttonBlue {
-  display: inline-block;
-  padding: 12px 24px;
-  text-decoration: none;
-  background-color: #C1D5E0;
-  color: #fff;
-  border-radius: 3px;
-  transition: background-color 0.2s;
-}
-.buttonBlue:hover, .buttonBlue:focus {
-  background-color: #8eb2c7;
-  color: #fff;
-}
-
-.buttonGreen {
-  display: inline-block;
-  padding: 12px 24px;
-  text-decoration: none;
   background-color: #6EB45C;
   color: #fff;
   border-radius: 3px;
   transition: background-color 0.2s;
 }
-.buttonGreen:hover, .buttonGreen:focus {
-  background-color: #4c863e;
+.c-btn:hover, .c-btn:focus {
+  background-color: #0C9C2C;
   color: #fff;
+}
+
+.buttonGreen, .buttonGrey {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.4em;
+  transition: background-color 0.2s;
+  width: 90%;
+  height: 2em;
+  line-height: 2em;
+  margin-bottom: 0.5em;
+  font-family: "PT Sans";
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+}
+
+.main label {
+  font-size: 32px;
+}
+
+.main input {
+  width: 70%;
+  margin: 1em;
+  padding: 0.5em 0.5em;
+  border-radius: 0.4em;
+  background-color: #EBEBEB;
+  font-size: 16px;
+}
+
+.flexGrow1 {
+  flex-grow: 1;
+}
+
+.buttonGrey {
+  background-color: #C1D4DF;
+  font-size: 50px;
+}
+.buttonGrey:hover, .buttonGrey:focus {
+  background-color: #90A2AD;
+  color: #fff;
+}
+
+.buttonGreen {
+  background-color: #6EB45C;
+  font-size: 50px;
+}
+.buttonGreen:hover, .buttonGreen:focus {
+  background-color: #0C9C2C;
+  color: #fff;
+}
+
+.header {
+  background: linear-gradient(to bottom, #087F23 25%, #0C9C2C 25%);
+  height: 11%;
+}
+
+.headerimg {
+  width: 10em;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 1em;
+}
+
+.headerarrow {
+  position: relative;
+  padding-left: 2%;
+  top: 0.4em;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,14 @@
 // Color palette
-$color-brand:           #ac6363;
+$color-brand:           #6EB45C;
 $color-brand-highlight: lighten($color-brand, 15%);
-$color-brand-shadow:     darken($color-brand, 15%);
+$color-brand-shadow:     #0C9C2C;
+$color-brand-darkest:      #087F23;
+
+$color-secondary:           #C1D4DF;
+$color-secondary-shadow:    #90A2AD;
+
+$color-background:            #F3F3F3;
+$color-background-darker:       #EBEBEB;
 
 $color-gray:            #666;
 $color-gray-light:      #ccc;
