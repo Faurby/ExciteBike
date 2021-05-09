@@ -66,6 +66,9 @@ Account.clearData = function () {
     }
 };
 
+if (localStorage.getItem("accountTable") === null) {
+    Account.createTestData();
+}
 accountTableString = localStorage["accountTable"];
 accountTable = JSON.parse( accountTableString);
 Account.convertRow2Obj = function (accountRow) {

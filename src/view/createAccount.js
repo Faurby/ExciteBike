@@ -1,13 +1,13 @@
 bs.view.createAccount = {
     setupUserInterface: function () {
-        var saveButton = document.forms['Account'].commit;
+        var saveButton = document.getElementById("registerButton");
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
         saveButton.addEventListener("click",
             bs.view.createAccount.handleSaveButtonClickEvent);
         window.addEventListener("beforeunload", function () {
-            account.saveAll();
+            Account.saveAll();
         });
     },
     handleSaveButtonClickEvent: function () {
@@ -15,10 +15,8 @@ bs.view.createAccount = {
         var slots = { email: formEl.email.value,
             fullName: formEl.fullName.value,
             password: formEl.password.value};
-        account.add( slots);
+        Account.add(slots);
+        Account.saveAll();
         formEl.reset();
-        console.log(formEl.email.value);
-        console.log(formEl.fullName.value);
-        console.log(formEl.password.value);
     }
 };
