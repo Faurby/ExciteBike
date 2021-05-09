@@ -30,10 +30,8 @@ function Account(slots) {
 
 Account.getAccount = function(email) {
     var account = Account.instances[email];
-    alert("Trying to get account with email: "+email);
 
     if (account) {
-        alert("Found account with email: "+account.email);
         return account;
     }
     return null;
@@ -95,7 +93,6 @@ Account.update = function (slots) {
     account.setExpiryDate(slots.expiryDate);
     account.setCVC(slots.cvc);
 
-    alert("Updated: "+slots.email);
     Account.instances[slots.email] = account;
 }
 
