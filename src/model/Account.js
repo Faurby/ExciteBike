@@ -1,13 +1,49 @@
 function Account(slots) {
-    this.fullName = slots.fullName;
     this.email = slots.email;
     this.password = slots.password;
+    this.fullName = null;
+    this.cardNumber = null;
+    this.expiryDate = null;
+    this.cvc = null;
     this.bike = null;
     this.rentStart = null;
+
+    this.setFullName = function(fullName) {
+        this.fullName = fullName;
+    };
+    this.setCardNumber = function(cardNumber) {
+        this.cardNumber = cardNumber;
+    };
+    this.setExpiryDate = function(setExpiryDate) {
+        this.setExpiryDate = setExpiryDate;
+    };
+    this.setCVC = function(cvc) {
+        this.cvc = cvc;
+    };
+    this.setBike = function(bike) {
+        this.bike = bike;
+    };
+    this.setRentStart = function(rentStart) {
+        this.rentStart = rentStart;
+    };
+
+    localStorage.setItem("emailToBeRegistered", this.email);
 };
 
-Account.getCurrentAccount = function() {
-    return localStorage.getItem("currentAccountName");
+Account.getAccount = function(email) {
+    var account = Account.instances[email]
+
+    if (account) {
+        return account;
+    }
+    return null;
+}
+
+Account.getCurrentAccountEmail = function() {
+    return localStorage.getItem("currentAccountEmail");
+}
+Account.getEmailToBeRegistered = function() {
+    return localStorage.getItem("emailToBeRegistered");
 }
 
 Account.instances = {};
@@ -46,7 +82,7 @@ Account.saveAll = function () {
 };
 
 Account.add = function (slots) {
-    var account = new Account( slots);
+    var account = new Account(slots);
     Account.instances[slots.email] = account;
     console.log("Account " + slots.email + " created!");
 };
@@ -72,7 +108,7 @@ Account.attemptLogin = function (email, password) {
 
     if (account) {
         if (account.password == password) {
-            localStorage.setItem("currentAccountName", account.fullName);
+            localStorage.setItem("currentAccountEmail", account.email);
             window.location.href = 'homescreen_findBike.html'
             return;
         }
