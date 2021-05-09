@@ -17,5 +17,8 @@ bs.view.createAccount = {
             password: formEl.password.value};
         account.add( slots);
         formEl.reset();
+        console.log(formEl.email.value);
+        console.log(formEl.fullName.value);
+        console.log(formEl.password.value);
     }
 };
