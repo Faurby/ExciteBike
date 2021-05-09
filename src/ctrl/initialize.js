@@ -1,0 +1,1 @@
+var bs = { model:{}, view:{}, ctrl:{} };
