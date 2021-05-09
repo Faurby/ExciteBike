@@ -254,4 +254,8 @@ table {
   padding-bottom: 40%;
 }
 
+.cardLabel label {
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=main.css.map */
