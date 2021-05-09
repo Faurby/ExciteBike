@@ -154,7 +154,7 @@ table {
 }
 .buttonGrey:hover, .buttonGrey:focus {
   background-color: #90A2AD;
-  color: #fff;
+  color: black;
 }
 
 .buttonGreen {
@@ -163,7 +163,7 @@ table {
 }
 .buttonGreen:hover, .buttonGreen:focus {
   background-color: #0C9C2C;
-  color: #fff;
+  color: black;
 }
 
 .header {
