@@ -26,28 +26,22 @@ function Account(slots) {
     this.setRentStart = function(rentStart) {
         this.rentStart = rentStart;
     };
-
-    localStorage.setItem("emailToBeRegistered", this.email);
 };
 
 Account.getAccount = function(email) {
     var account = Account.instances[email];
+    alert("Trying to get account with email: "+email);
 
     if (account) {
+        alert("Found account with email: "+account.email);
         return account;
     }
     return null;
 }
 
-Account.setCurrentAccountEmail = function(email) {
-    localStorage.setItem("currentAccountEmail", email);
-}
-
-Account.getCurrentAccountEmail = function() {
-    return localStorage.getItem("currentAccountEmail");
-}
-Account.getEmailToBeRegistered = function() {
-    return localStorage.getItem("emailToBeRegistered");
+Account.getCurrentAccount = function() {
+    var email = localStorage.getItem("currentAccountEmail");
+    return this.getAccount(email);
 }
 
 Account.instances = {};
@@ -88,8 +82,22 @@ Account.saveAll = function () {
 Account.add = function (slots) {
     var account = new Account(slots);
     Account.instances[slots.email] = account;
+    
+    localStorage.setItem("emailToBeRegistered", slots.email);
     console.log("Account " + slots.email + " created!");
 };
+
+Account.update = function (slots) {
+    var account = Account.instances[slots.email];
+
+    account.setFullName(slots.fullName);
+    account.setCardNumber(slots.cardNumber);
+    account.setExpiryDate(slots.expiryDate);
+    account.setCVC(slots.cvc);
+
+    alert("Updated: "+slots.email);
+    Account.instances[slots.email] = account;
+}
 
 Account.destroy = function (email) {
     if (Account.instances[email]) {

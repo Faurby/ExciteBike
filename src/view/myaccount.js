@@ -1,6 +1,6 @@
 bs.view.myaccount = {
     setupUserInterface: function () {
-        var username = document.getElementById("username");
-        username.innerHTML = Account.getCurrentAccount();
+        var account = Account.getCurrentAccount();
+        document.getElementById("fullName").innerHTML = account.fullName;
     },
 };
