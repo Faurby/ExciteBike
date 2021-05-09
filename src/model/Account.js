@@ -55,6 +55,7 @@ Account.destroy = function (email) {
 };
 
 Account.createTestData = function () {
+    localStorage["accountTable"] = "{}"
     Account.instances["john@xcite.com"] = new Account({email:"john@xcite.com", fullName:"John Excite", password:"1234"});
     Account.instances["admin@xcite.com"] = new Account({email:"admin@xcite.com", fullName:"Admin", password:"admin"});
     Account.saveAll();
@@ -78,9 +79,8 @@ Account.attemptLogin = function (email, password) {
     alert("login failed");
 }
 
-if (localStorage.getItem("accountTable") === null) {
-    Account.createTestData();
-}
+Account.createTestData();
+
 accountTableString = localStorage["accountTable"];
 accountTable = JSON.parse( accountTableString);
 Account.convertRow2Obj = function (accountRow) {
