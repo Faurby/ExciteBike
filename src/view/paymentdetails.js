@@ -18,15 +18,19 @@ bs.view.paymentdetails = {
         var expiryDate = formEl.expiryDate.value
         var cvc = formEl.cvc.value
 
-        var email = Account.getEmailToBeRegistered();
-        var account = Account.getAccount(email);
+        var email = localStorage.getItem("emailToBeRegistered");
 
-        account.setFullName(fullName);
-        account.setCardNumber(cardNumber);
-        account.setExpiryDate(expiryDate);
-        account.setCVC(cvc);
+        var slots = { email: email, 
+                      fullName: fullName, 
+                      cardNumber: cardNumber, 
+                      expiryDate: expiryDate,
+                      cvc: cvc};
 
-        Account.setCurrentAccountEmail(email);
+        Account.update(slots);
+
+        alert("What?! "+email+" "+Account.getAccount(email).cardNumber);
+
+        localStorage.setItem("currentAccountEmail", email);
         window.location.href = 'welcome.html'
     }
 };
