@@ -4,19 +4,28 @@ bs.view.register = {
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
-        saveButton.addEventListener("click",
-            bs.view.register.handleSaveButtonClickEvent);
+        saveButton.addEventListener("click", bs.view.register.handleSaveButtonClickEvent);
         window.addEventListener("beforeunload", function () {
             Account.saveAll();
         });
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['RegisterForm'];
-        var slots = { email: formEl.email.value,
-            fullName: formEl.fullName.value,
-            password: formEl.password.value};
-        Account.add(slots);
-        Account.saveAll();
-        formEl.reset();
+
+        var password = formEl.password.value
+        var passwordAgain = formEl.passwordAgain.value
+
+        if (password == passwordAgain) {
+            
+            var slots = { email: formEl.email.value,
+                          password: formEl.password.value};
+
+            Account.add(slots);
+            Account.saveAll();
+            window.location.href = 'paymentdetails.html'
+
+        } else {
+            alert("Passwords do not match!")
+        }
     }
 };

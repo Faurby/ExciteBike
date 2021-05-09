@@ -10,6 +10,9 @@ $color-secondary-shadow:    #90A2AD;
 $color-background:            #F3F3F3;
 $color-background-darker:       #EBEBEB;
 
+$color-warning:                 #BF5454;
+$color-warning-shadow:            darken($color-warning, 15%);
+
 $color-gray:            #666;
 $color-gray-light:      #ccc;
 $color-gray-dark:       #333;
