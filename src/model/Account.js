@@ -7,7 +7,6 @@ function Account(slots) {
 };
 
 Account.getCurrentAccount = function() {
-    alert("Get current account "+localStorage.getItem("currentAccount"));
     return localStorage.getItem("currentAccount");
 }
 
@@ -74,8 +73,6 @@ Account.attemptLogin = function (email, password) {
     if (account) {
         if (account.password == password) {
             localStorage.setItem("currentAccount", account.fullName);
-
-            alert("Set current account to "+account.fullName)
             window.location.href = 'my_account.html'
             return;
         }
