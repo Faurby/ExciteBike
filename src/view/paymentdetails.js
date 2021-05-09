@@ -26,6 +26,7 @@ bs.view.paymentdetails = {
         account.setExpiryDate(expiryDate);
         account.setCVC(cvc);
 
-        alert("Your card number is: "+account.cardNumber);
+        Account.setCurrentAccountEmail(email);
+        window.location.href = 'welcome.html'
     }
 };

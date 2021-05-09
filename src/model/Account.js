@@ -39,6 +39,10 @@ Account.getAccount = function(email) {
     return null;
 }
 
+Account.setCurrentAccountEmail = function(email) {
+    localStorage.setItem("currentAccountEmail", email);
+}
+
 Account.getCurrentAccountEmail = function() {
     return localStorage.getItem("currentAccountEmail");
 }
