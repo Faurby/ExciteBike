@@ -7,7 +7,7 @@ function Account(slots) {
     this.cvc = null;
     this.bike = null;
     this.rentStart = null;
-
+    
     this.setFullName = function(fullName) {
         this.fullName = fullName;
     };
@@ -31,7 +31,7 @@ function Account(slots) {
 };
 
 Account.getAccount = function(email) {
-    var account = Account.instances[email]
+    var account = Account.instances[email];
 
     if (account) {
         return account;
@@ -113,7 +113,7 @@ Account.attemptLogin = function (email, password) {
             return;
         }
     }
-    alert("login failed");
+    alert("Failed to login!");
 }
 
 if (localStorage.getItem("accountTable") === null) {

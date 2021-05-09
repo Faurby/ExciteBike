@@ -18,7 +18,7 @@ bs.view.paymentdetails = {
         var expiryDate = formEl.expiryDate.value
         var cvc = formEl.cvc.value
 
-        var email = Account.getCurrentAccountEmail();
+        var email = Account.getEmailToBeRegistered();
         var account = Account.getAccount(email);
 
         account.setFullName(fullName);
