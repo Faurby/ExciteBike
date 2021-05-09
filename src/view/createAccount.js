@@ -11,7 +11,7 @@ bs.view.createAccount = {
         });
     },
     handleSaveButtonClickEvent: function () {
-        var formEl = document.forms['Account'];
+        var formEl = document.forms['RegisterForm'];
         var slots = { email: formEl.email.value,
             fullName: formEl.fullName.value,
             password: formEl.password.value};

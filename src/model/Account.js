@@ -66,6 +66,18 @@ Account.clearData = function () {
     }
 };
 
+Account.attemptLogin = function (email, password) {
+    var account = Account.instances[email]
+
+    if (account) {
+        if (account.password == password) {
+            window.location.pathname = '/ExciteBike/html/homescreen_hasBike.html'
+            return;
+        }
+    }
+    alert("login failed");
+}
+
 if (localStorage.getItem("accountTable") === null) {
     Account.createTestData();
 }

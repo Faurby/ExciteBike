@@ -4,7 +4,13 @@
         <title>ExciteBike</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
-    
+
+        <script src="../src/ctrl/initialize.js"></script>
+        <script src="../src/model/Account.js"></script>
+        <script src="../src/view/login.js"></script>
+        <script>
+          window.addEventListener("load", bs.view.login.setupUserInterface);
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -18,15 +24,16 @@
                 <img class="profilelogo visibleHidden" src="../img/profilLogo.png" >
         </div>
             <div class="flexGrow1 justifyCenter width-100">
-                <form class="flexColumn justifyCenter height-100">
+                <form id="LoginForm" class="flexColumn justifyCenter height-100">
                     <label>E-mail Address:</label> <br>
-                    <input type="email">
+                    <input type="email" name="email">
                     <label>Password:</label> <br>
-                    <input type="password">
+                    <input type="password" name="password">
                 </form>
             </div>
             <div class="flexColumn width-100">
-                <a class="buttonGreen" href="homescreen_hasbike.html">Login</a>
+                <button id="loginButton" type="button"> Login </button>
+                <!--<a class="buttonGreen" href="homescreen_hasbike.html">Login</a>-->
             </div>
         </main>
     </body>
