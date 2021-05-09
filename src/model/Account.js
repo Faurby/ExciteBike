@@ -7,7 +7,7 @@ function Account(slots) {
 };
 
 Account.getCurrentAccount = function() {
-    return localStorage.getItem("currentAccount");
+    return localStorage.getItem("currentAccountName");
 }
 
 Account.instances = {};
@@ -72,8 +72,8 @@ Account.attemptLogin = function (email, password) {
 
     if (account) {
         if (account.password == password) {
-            localStorage.setItem("currentAccount", account.fullName);
-            window.location.href = 'my_account.html'
+            localStorage.setItem("currentAccountName", account.fullName);
+            window.location.href = 'homescreen_findBike.html'
             return;
         }
     }
