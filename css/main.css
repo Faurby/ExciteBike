@@ -175,4 +175,10 @@ table {
   top: 0.7em;
 }
 
+.infoBox {
+  border-radius: 0.4em;
+  background-color: white;
+  padding: 30%;
+}
+
 /*# sourceMappingURL=main.css.map */
