@@ -71,7 +71,7 @@ Account.attemptLogin = function (email, password) {
 
     if (account) {
         if (account.password == password) {
-            window.location.pathname = '/ExciteBike/html/homescreen_hasBike.html'
+            window.location.href = 'homescreen_hasbike.html'
             return;
         }
     }
