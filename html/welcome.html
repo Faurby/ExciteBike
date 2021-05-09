@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html class="htmlFix">
+<html>
     <head>
         <title>ExciteBike</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
     
-        <script src="../src/ctrl/initialize.js"></script>
-        <script src="../src/model/Account.js"></script>
-        <script src="../src/view/myaccount.js"></script>
-        <script>
-          window.addEventListener("load", bs.view.myaccount.setupUserInterface);
-        </script>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <main class="flexColumn height-100">
             <div class="header flexRow width-100">
-                    <a class="" href="javascript:history.go(-1)">
-                        <img class="headerarrow" src="../img/backArrow.png" >
-                    </a>
+                    <img class="headerarrow visibleHidden" src="../img/backArrow.png" >
+                    
                     <img class="headerimg" src="../img/excitebikeLogoHeader.png">
                     
                     <a href="my_account.html">
@@ -29,14 +21,19 @@
             </div>
             <div class="flexGrow1 justifyCenter width-100">
                 <section class="flexColumn height-100 justifyCenter centerText">
-                    <h2 id="username" class="h2">username</h2> 
+                    <h1 class="h1 padding-bottom-10">Welcome! </h1>
+                    <h2 class="h3 leftalignText padding-bottom-10 padding-left-10 padding-right-10">
+                        Thanks for registering. <br><br>
+                        You are now ready to start renting an excitebike.
+                        Press help for more information about how to rent, find and return a bike.<br><br>
+                        You can always change your login or card information.<br><br>
+                        Press the icon in the top-right corner to access your account.
+                    </h2>
                 </section>
             </div>
             <div class="flexColumn width-100">
-                <a class="buttonGrey margin-bottom-5 smallButton" href="account_details.html">Account details</a>
-                <a class="buttonGrey margin-bottom-5 smallButton" href="payment_info.html">Change payment info</a>
-                <a class="buttonGrey margin-bottom-5" href="help.html">Help</a>
-                <a class="buttonGrey margin-bottom-5" href="startscreen.html">Log out</a>
+                <a class="buttonGrey margin-bottom-5" href="homescreen_hasbike.html">Help</a>
+                <a class="buttonGreen margin-bottom-5" href="homescreen_findbike.html">Go rent!</a>
             </div>
         </main>
     </body>
