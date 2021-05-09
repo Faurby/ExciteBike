@@ -14,7 +14,6 @@ bs.view.findBike = {
                 for (i=0; i < keys.length; i++) {
                     key = keys[i];
                     var bike = Bike.instances[key]
-                
 
                     if(navigator.geolocation){
                         var userLat = position.coords.latitude; 
@@ -42,19 +41,56 @@ bs.view.findBike = {
 
                         bike.setDistance(distString)
                         console.log(i + ": " + bike.name + ", dist: " + distString);
+                        addBike(bike, distString)
+                        
                     }
                 }
             });
             
         } else { 
             console.log("Geolocation is not supported by this browser.");
+            for (i=0; i < keys.length; i++) {
+                key = keys[i];
+                var bike = Bike.instances[key]
+                addBike(bike, bike.distToUser);
+            }
         }
     
-    }
+    },
 
 };
 
 Number.prototype.toRad = function() {
     return this * Math.PI / 180;
 }
- 
+
+addBike = function (bike, distTo) {
+
+    let section = document.getElementById("bikeList");
+
+    if(bike.available = true){
+        let h2 = document.createElement("h2");
+        h2.className = "h2";
+        h2.textContent = bike.name;
+        
+        let p = document.createElement("p");
+        p.className = "p"
+        p.textContent = "1 DKK/min";
+
+        let div = document.createElement("div");
+        div.className = "leftalignText"
+        div.appendChild(h2);
+        div.appendChild(p); distTo
+
+        let h2_dist = document.createElement("h2_dist");
+        h2_dist.textContent = distTo;
+
+        let a = document.createElement("a");
+        a.className = "flexRow infoBoxBike";
+        a.href = href="begin_rental.html";
+        a.appendChild(div)
+        a.appendChild(h2_dist);
+
+        section.appendChild(a);
+    }
+}
