@@ -93,7 +93,6 @@ table {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -103,6 +102,10 @@ table {
 
 .centerText {
   text-align: center;
+}
+
+.leftalignText {
+  text-align: left;
 }
 
 .width-100 {
@@ -138,8 +141,20 @@ table {
   padding-bottom: 10%;
 }
 
+.padding-left-10 {
+  padding-left: 10%;
+}
+
+.padding-right-10 {
+  padding-right: 10%;
+}
+
 .margin-bottom-5 {
   margin-bottom: 5%;
+}
+
+.button-font-size {
+  font-size: 50px;
 }
 
 .buttonGrey {
@@ -200,11 +215,38 @@ table {
   font-size: 16px;
 }
 
+.infoBoxBikes {
+  overflow: scroll;
+  height: 90%;
+  justify-content: flex-start;
+  gap: 2%;
+  box-sizing: border-box;
+}
+
 .infoBoxWhite {
   border-radius: 0.4em;
   background-color: white;
   text-align: center;
   padding: 0% 12%;
+}
+
+.infoBoxBike {
+  border-radius: 0.4em;
+  background-color: white;
+  text-align: center;
+  padding: 5% 5%;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.infoBoxBike, a:visited, a:focus, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.hoverButton {
+  position: fixed;
+  top: 85%;
 }
 
 .bikeDetails {
