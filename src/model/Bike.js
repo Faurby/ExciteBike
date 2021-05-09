@@ -47,9 +47,10 @@ Bike.saveAll = function () {
 Bike.createTestData = function () {
     Bike.instances["Bolt"] = new Bike({name:"Bolt", available:true, x:55.61, y:12.61});
     Bike.instances["Gazelle"] = new Bike({name:"Gazelle", available:true, x:55.64, y:12.62});
+    Bike.instances["Thunder"] = new Bike({name:"Thunder", available:true, x:55.6, y:12.60});
     Bike.instances["Winther"] = new Bike({name:"Winther", available:true, x:55.7, y:12.595});
     Bike.instances["Brunch"] = new Bike({name:"Brunch", available:true, x:55.65, y:12.60});
-    
+    Bike.instances["Tech"] = new Bike({name:"Tech", available:true, x:55.6605, y:12.59});
     Bike.saveAll();
 };
 
