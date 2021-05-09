@@ -31,6 +31,10 @@
     text-align: left;
 }
 
+.rightalignText {
+    text-align: right;
+}
+
 .width-100 {
     width: 100%;
 }
@@ -86,6 +90,17 @@
 
 .buttonGreen {
     @include createButton($color-brand, $color-brand-shadow, $button-font-size);
+}
+
+.buttonRed {
+    @include createButton($color-warning, $color-warning-shadow, $label-font-size);
+}
+
+
+.smallButton {
+    font-size: $label-font-size; 
+    height: 2.7em;
+    line-height: 2.7em;
 }
 
 .header {
@@ -183,4 +198,17 @@
 
 .cardLabel label{
     font-size: $base-font-size;
+}
+
+.accountDetails {
+
+}
+
+.accountBox {
+    border-radius: $button-radius;
+    background-color: white;
+    text-align: center;
+    width: 70%;
+    padding: 2% 5%;
+
 }
