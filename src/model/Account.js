@@ -1,8 +1,15 @@
-function Account( slots) {
+function Account(slots) {
     this.fullName = slots.fullName;
     this.email = slots.email;
     this.password = slots.password;
+    this.bike = null;
+    this.rentStart = null;
 };
+
+Account.getCurrentAccount = function() {
+    alert("Get current account "+localStorage.getItem("currentAccount"));
+    return localStorage.getItem("currentAccount");
+}
 
 Account.instances = {};
 
@@ -61,25 +68,24 @@ Account.createTestData = function () {
     Account.saveAll();
 };
 
-Account.clearData = function () {
-    if (confirm("Do you really want to delete all account data?")) {
-        localStorage["accountTable"] = "{}";
-    }
-};
-
 Account.attemptLogin = function (email, password) {
     var account = Account.instances[email]
 
     if (account) {
         if (account.password == password) {
-            window.location.href = 'homescreen_hasbike.html'
+            localStorage.setItem("currentAccount", account.fullName);
+
+            alert("Set current account to "+account.fullName)
+            window.location.href = 'my_account.html'
             return;
         }
     }
     alert("login failed");
 }
 
-Account.createTestData();
+if (localStorage.getItem("accountTable") === null) {
+    Account.createTestData();
+}
 
 accountTableString = localStorage["accountTable"];
 accountTable = JSON.parse( accountTableString);

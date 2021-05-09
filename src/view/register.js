@@ -1,4 +1,4 @@
-bs.view.createAccount = {
+bs.view.register = {
     setupUserInterface: function () {
         var saveButton = document.getElementById("registerButton");
         // load all account objects
