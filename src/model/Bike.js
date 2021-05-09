@@ -3,6 +3,10 @@ function Bike(slots) {
     this.available = slots.available;
     this.x = slots.x;
     this.y = slots.y;
+    this.distToUser = "500 m"
+    this.setDistance = function(dist) {
+        this.distToUser = dist;
+    }
 };
 
 Bike.instances = {};
@@ -41,10 +45,10 @@ Bike.saveAll = function () {
 };
 
 Bike.createTestData = function () {
-    Bike.instances["Bolt"] = new Bike({name:"Bolt", available:true, x:1, y:1});
-    Bike.instances["Gazelle"] = new Bike({name:"Gazelle", available:true, x:1, y:1});
-    Bike.instances["Winther"] = new Bike({name:"Winther", available:true, x:1, y:1});
-    Bike.instances["Brunch"] = new Bike({name:"Brunch", available:true, x:1, y:1});
+    Bike.instances["Bolt"] = new Bike({name:"Bolt", available:true, x:55.61, y:12.61});
+    Bike.instances["Gazelle"] = new Bike({name:"Gazelle", available:true, x:55.64, y:12.62});
+    Bike.instances["Winther"] = new Bike({name:"Winther", available:true, x:55.7, y:12.595});
+    Bike.instances["Brunch"] = new Bike({name:"Brunch", available:true, x:55.65, y:12.60});
     
     Bike.saveAll();
 };
@@ -60,5 +64,4 @@ Bike.convertRow2Obj = function (bikeRow) {
     return bike;
 };
 
-
-
+Bike.createTestData();
