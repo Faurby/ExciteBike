@@ -6,18 +6,11 @@
 
 @import "components.buttons";
 
-.htmlFix {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
 .flexColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 .flexRow {
     display: flex;

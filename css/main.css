@@ -83,12 +83,6 @@ table {
   font-family: "PT Sans";
 }
 
-.htmlFix {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
 .flexColumn {
   display: flex;
   flex-direction: column;
