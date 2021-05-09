@@ -80,15 +80,19 @@ table {
   width: 90%;
   height: 2em;
   line-height: 2em;
-  margin-bottom: 0.5em;
   font-family: "PT Sans";
+}
+
+.htmlFix {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .flexColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .flexRow {
@@ -96,10 +100,15 @@ table {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 .justifyCenter {
   justify-content: center;
+}
+
+.centerText {
+  text-align: center;
 }
 
 .width-100 {
@@ -123,8 +132,20 @@ table {
   font-size: 16px;
 }
 
+.visibleHidden {
+  visibility: hidden;
+}
+
 .flexGrow1 {
   flex-grow: 1;
+}
+
+.padding-bottom-10 {
+  padding-bottom: 10%;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5%;
 }
 
 .buttonGrey {
@@ -148,37 +169,53 @@ table {
 .header {
   background: linear-gradient(to bottom, #087F23 25%, #0C9C2C 25%);
   height: 11%;
+  padding-top: 6%;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
 }
 
 .headerimg {
-  width: 10em;
-  height: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: 1em;
+  height: 80%;
+  width: auto;
 }
 
-.headerarrow {
-  position: relative;
-  padding-left: 2%;
-  top: 0.4em;
+.greentext {
+  color: #6EB45C;
 }
 
-.profilelogo {
-  position: relative;
-  width: 3.5em;
-  margin-left: auto;
-  margin-right: 1em;
-  top: 0.7em;
+.infoBox h1 {
+  font-weight: bold;
+  font-size: 32px;
 }
 
-.infoBox {
+.h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.h2 {
+  font-size: 32px;
+}
+
+.h3 {
+  font-size: 24px;
+}
+
+.p {
+  font-size: 16px;
+}
+
+.infoBoxWhite {
   border-radius: 0.4em;
   background-color: white;
-  padding: 30%;
+  text-align: center;
+  padding: 0% 12%;
+}
+
+.bikeDetails {
+  padding-top: 10%;
+  padding-bottom: 40%;
 }
 
 /*# sourceMappingURL=main.css.map */

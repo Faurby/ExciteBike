@@ -6,22 +6,33 @@
 
 @import "components.buttons";
 
+.htmlFix {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 .flexColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
+
 
 .flexRow {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
 }
 
 .justifyCenter {
     justify-content: center
+}
+
+.centerText {
+    text-align: center;
 }
 
 .width-100 {
@@ -45,8 +56,20 @@
     font-size: $base-font-size;
 }
 
+.visibleHidden {
+    visibility: hidden;
+}
+
 .flexGrow1 {
     flex-grow: 1;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10%;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5%;
 }
 
 .buttonGrey {
@@ -60,37 +83,60 @@
 .header {
     background: linear-gradient(to bottom, $color-brand-darkest 25%, $color-brand-shadow 25%);
     height: 11%;
+    padding-top: 6%;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-sizing: border-box;
 }
+
+.profilelogo{
+}
+
 //Spørg flyv om hjælp
 .headerimg {
-    width: 10em;
-    height: auto; 
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: 1em;
+    height: 80%;
+    width: auto; 
 }
 
 .headerarrow {
-    position: relative;
-    padding-left: 2%;
-    top: 0.4em;
+
 }
 
-.profilelogo {
-    position: relative;
-    width: 3.5em;
-    margin-left: auto;
-    margin-right: 1em;
-    top: 0.7em;
+.greentext{
+    color: $color-brand
 }
 
-.infoBox {
+.infoBox h1{
+    font-weight: bold;
+    font-size: $label-font-size
+}
+
+.h1 {
+    font-weight: bold;
+    font-size: $label-font-size
+}
+
+.h2 {
+    font-size: $label-font-size
+
+}
+
+.h3 {
+    font-size: $medium-font-size
+}
+
+.p {
+    font-size: $base-font-size;
+}
+
+.infoBoxWhite {
     border-radius: $button-radius;
     background-color: white;
-    padding: 30%;
-    
+    text-align: center;
+    padding: 0% 12%;   
+}
 
+.bikeDetails {
+    padding-top: 10%;
+    padding-bottom: 40%;
 }
