@@ -1,10 +1,10 @@
 eb.view.login = {
     setupUserInterface: function () {
-        var saveButton = document.getElementById("loginButton");
+        var loginButton = document.getElementById("loginButton");
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
-        saveButton.addEventListener("click", eb.view.login.handleSaveButtonClickEvent);
+        loginButton.addEventListener("click", eb.view.login.handleSaveButtonClickEvent);
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['LoginForm'];

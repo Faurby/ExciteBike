@@ -1,10 +1,10 @@
 eb.view.register = {
     setupUserInterface: function () {
-        var saveButton = document.getElementById("registerButton");
+        var registerButton = document.getElementById("registerButton");
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
-        saveButton.addEventListener("click", eb.view.register.handleSaveButtonClickEvent);
+        registerButton.addEventListener("click", eb.view.register.handleSaveButtonClickEvent);
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['RegisterForm'];

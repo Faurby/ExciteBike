@@ -3,7 +3,14 @@
     <head>
         <title>ExciteBike</title>
         <link rel="stylesheet" type="text/css" href="../css/main.css">
-    
+
+        <script src="../src/ctrl/initialize.js"></script>
+        <script src="../src/model/Account.js"></script>
+        <script src="../src/view/beginrental.js"></script>
+        <script>
+            window.addEventListener("load", eb.view.beginrental.setupUserInterface);
+        </script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -25,7 +32,7 @@
                     <div class="infoBoxWhite flexColumn">
                         <div class="flexGrow1 height-100 bikeDetails">
                             <p class="h3 margin-bottom-5">Selected exciteBike:</p>
-                            <h2 class="greentext margin-bottom-20">Emma</h2>
+                            <h2 id="bikeName" class="greentext margin-bottom-20"></h2>
                             <h3 class="h3 leftalignText margin-bottom-5">500m away</h2>
                             <h3 class="h3 leftalignText">1 DKK/min</h3>
                         </div>
@@ -33,7 +40,7 @@
                 </section>
             </div>
             <div class="flexColumn width-100">
-                <a class="buttonGreen margin-bottom-5" href="rental_code.html">Confirm</a>
+                <a id="confirmButton" class="buttonGreen margin-bottom-5" href="rental_code.html">Confirm</a>
             </div>
         </main>
     </body>

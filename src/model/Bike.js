@@ -13,6 +13,15 @@ function Bike(slots) {
     }
 };
 
+Bike.getBike = function(name) {
+    var bike = Bike.instances[name];
+
+    if (bike) {
+        return bike;
+    }
+    return null;
+}
+
 Bike.instances = {};
 
 Bike.loadAll = function () {

@@ -82,13 +82,8 @@ eb.view.findbike = {
     },
 
     handleSaveButtonClickEvent: function(bike) {
-        var account = Account.getCurrentAccount();
-        bike.setAvailable(false);
-        account.setBike(bike);
-        Bike.saveAll();
-        Account.saveAll();
+        localStorage.setItem("currentlySelectedBike", bike.name);
     }
-
 };
 
 Number.prototype.toRad = function() {
@@ -128,7 +123,7 @@ addBike = function (bike, distTo) {
         a.appendChild(div)
         a.appendChild(h2_dist);
         a.addEventListener("click", function(){eb.view.findbike.handleSaveButtonClickEvent(bike)});
-        a.href="bike_details.html"
+        a.href="begin_rental.html"
         section.appendChild(a);
     }
 }
