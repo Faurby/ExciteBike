@@ -12,24 +12,15 @@ bs.view.paymentdetails = {
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['PaymentDetailsForm'];
-
-        var fullName = formEl.fullName.value
-        var cardNumber = formEl.cardNumber.value
-        var expiryDate = formEl.expiryDate.value
-        var cvc = formEl.cvc.value
-
         var email = localStorage.getItem("emailToBeRegistered");
 
         var slots = { email: email, 
-                      fullName: fullName, 
-                      cardNumber: cardNumber, 
-                      expiryDate: expiryDate,
-                      cvc: cvc};
+                      fullName: formEl.fullName.value, 
+                      cardNumber: formEl.cardNumber.value, 
+                      expiryDate: formEl.expiryDate.value,
+                      cvc: formEl.cvc.value};
 
         Account.update(slots);
-        //TODO After updating the account it can't be retrieved anymore :(
-        //Dont know whats wrong
-
         localStorage.setItem("currentAccountEmail", email);
         window.location.href = 'welcome.html'
     }

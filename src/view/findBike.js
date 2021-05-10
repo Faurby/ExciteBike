@@ -1,7 +1,10 @@
 bs.view.findBike = {
 
     setupUserInterface: function () {      
-        
+                
+        // load all account objects
+        Account.loadAll();
+
         let section = document.getElementById("bikeList");
         let h2_load = document.createElement("h2_load");
         h2_load.textContent = "Loading...";
