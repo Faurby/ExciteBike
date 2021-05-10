@@ -87,7 +87,6 @@ bs.view.findBike = {
         account.setBike(bike);
         Bike.saveAll();
         Account.saveAll();
-        alert("Bike: " + account.bike.name);
     }
 
 };
@@ -126,7 +125,6 @@ addBike = function (bike, distTo) {
 
         let a = document.createElement("a");
         a.className = "flexRow infoBoxBike";
-        a.href = href="begin_rental.html";
         a.appendChild(div)
         a.appendChild(h2_dist);
         a.addEventListener("click", function(){bs.view.findBike.handleSaveButtonClickEvent(bike)});
