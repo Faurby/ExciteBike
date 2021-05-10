@@ -1,10 +1,10 @@
-bs.view.register = {
+eb.view.register = {
     setupUserInterface: function () {
         var saveButton = document.getElementById("registerButton");
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
-        saveButton.addEventListener("click", bs.view.register.handleSaveButtonClickEvent);
+        saveButton.addEventListener("click", eb.view.register.handleSaveButtonClickEvent);
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['RegisterForm'];
@@ -19,7 +19,7 @@ bs.view.register = {
 
             Account.add(slots);
             Account.saveAll();
-            window.location.href = 'paymentdetails.html'
+            window.location.href = 'payment_details.html'
 
         } else {
             alert("Passwords do not match!")

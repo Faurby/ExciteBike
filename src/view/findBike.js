@@ -1,4 +1,4 @@
-bs.view.findBike = {
+eb.view.findbike = {
 
     setupUserInterface: function () {      
                 
@@ -127,8 +127,8 @@ addBike = function (bike, distTo) {
         a.className = "flexRow infoBoxBike";
         a.appendChild(div)
         a.appendChild(h2_dist);
-        a.addEventListener("click", function(){bs.view.findBike.handleSaveButtonClickEvent(bike)});
-        a.href="homescreen_hasBike.html"
+        a.addEventListener("click", function(){eb.view.findbike.handleSaveButtonClickEvent(bike)});
+        a.href="bike_details.html"
         section.appendChild(a);
     }
 }

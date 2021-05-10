@@ -1,4 +1,4 @@
-bs.view.hasBike = {
+eb.view.bikedetails = {
     setupUserInterface: function () {
                 
         // load all account objects

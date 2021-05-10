@@ -1,1 +1,1 @@
-var bs = { model:{}, view:{}, ctrl:{} };
+var eb = { model:{}, view:{}, ctrl:{} };

@@ -118,7 +118,7 @@ Account.attemptLogin = function (email, password) {
     if (account) {
         if (account.password == password) {
             localStorage.setItem("currentAccountEmail", account.email);
-            window.location.href = 'homescreen_findBike.html'
+            window.location.href = 'find_bike.html'
             return;
         }
     }

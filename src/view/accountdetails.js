@@ -1,4 +1,4 @@
-bs.view.accountdetails = {
+eb.view.accountdetails = {
     setupUserInterface: function () {
                 
         // load all account objects

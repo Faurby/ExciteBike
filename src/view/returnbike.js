@@ -1,10 +1,10 @@
-bs.view.returnbike = {
+eb.view.returnbike = {
     setupUserInterface: function () {
         var confirmButton = document.getElementById("confirmButton");
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
-        deleteButton.addEventListener("click", bs.view.returnbike.handleSaveButtonClickEvent);
+        confirmButton.addEventListener("click", eb.view.returnbike.handleSaveButtonClickEvent);
     },
     handleSaveButtonClickEvent: function () {
         var account = Account.getCurrentAccount();

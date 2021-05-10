@@ -1,10 +1,10 @@
-bs.view.paymentdetails = {
+eb.view.paymentdetails = {
     setupUserInterface: function () {
         var saveButton = document.getElementById("confirmButton");
         // load all account objects
         Account.loadAll();
         // Set an event handler for the save/submit button
-        saveButton.addEventListener("click", bs.view.paymentdetails.handleSaveButtonClickEvent);
+        saveButton.addEventListener("click", eb.view.paymentdetails.handleSaveButtonClickEvent);
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['PaymentDetailsForm'];
