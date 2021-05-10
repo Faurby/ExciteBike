@@ -1,6 +1,9 @@
 function Bike(slots) {
     this.name = slots.name;
     this.available = slots.available;
+    this.setAvailable = function(Boolean) {
+        this.available = Boolean;
+    }
     this.x = slots.x;
     this.y = slots.y;
     this.distToUser = 0.5

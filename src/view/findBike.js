@@ -1,6 +1,7 @@
 bs.view.findBike = {
 
-    setupUserInterface: function () {        
+    setupUserInterface: function () {      
+        
         let section = document.getElementById("bikeList");
         let h2_load = document.createElement("h2_load");
         h2_load.textContent = "Loading...";
@@ -85,6 +86,7 @@ Number.prototype.toRad = function() {
 
 addBike = function (bike, distTo) {
 
+    var account = Account.getCurrentAccount();
     let section = document.getElementById("bikeList");
 
     if(bike.available = true){
@@ -102,7 +104,6 @@ addBike = function (bike, distTo) {
         div.appendChild(p); distTo
 
         let h2_dist = document.createElement("h2_dist");
-
         var d = distTo;
         var distString;
         if(d > 1){
@@ -110,7 +111,6 @@ addBike = function (bike, distTo) {
         } else {
             distString = (Math.round(d*100))*10 + " m"
         }
-
         h2_dist.textContent = distString;
 
         let a = document.createElement("a");
@@ -118,7 +118,14 @@ addBike = function (bike, distTo) {
         a.href = href="begin_rental.html";
         a.appendChild(div)
         a.appendChild(h2_dist);
-
+        a.onclick = onClickFunction(bike, account);
+        a.href="homescreen_hasBike.html"
         section.appendChild(a);
+    }
+
+    function onClickFunction(bike, account){
+        bike.setAvailable(false);
+        account.setBike = bike;
+        console.log("Bike: " + account.bike);
     }
 }
