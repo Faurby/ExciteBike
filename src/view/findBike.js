@@ -47,7 +47,7 @@ bs.view.findBike = {
                         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
                         var d = R * c; 
 
-                        bike.setDistance(d)
+                        bike.setDistance(d);
                         console.log(i + ": " + bike.name + ", dist: " + d + "km");
                         bikes[i] = bike;
                     }
@@ -65,7 +65,7 @@ bs.view.findBike = {
 
                 bikes.forEach(function(bike, index, bikes){
                     addBike(bike, bike.distToUser)
-                })
+                });
             });
             
         } else { 
@@ -81,6 +81,15 @@ bs.view.findBike = {
         }
     },
 
+    handleSaveButtonClickEvent: function(bike) {
+        var account = Account.getCurrentAccount();
+        bike.setAvailable(false);
+        account.setBike(bike);
+        Bike.saveAll();
+        Account.saveAll();
+        alert("Bike: " + account.bike.name);
+    }
+
 };
 
 Number.prototype.toRad = function() {
@@ -89,7 +98,6 @@ Number.prototype.toRad = function() {
 
 addBike = function (bike, distTo) {
 
-    var account = Account.getCurrentAccount();
     let section = document.getElementById("bikeList");
 
     if(bike.available = true){
@@ -98,21 +106,21 @@ addBike = function (bike, distTo) {
         h2.textContent = bike.name;
         
         let p = document.createElement("p");
-        p.className = "p"
+        p.className = "p";
         p.textContent = "1 DKK/min";
 
         let div = document.createElement("div");
-        div.className = "leftalignText"
+        div.className = "leftalignText";
         div.appendChild(h2);
-        div.appendChild(p); distTo
+        div.appendChild(p); 
 
         let h2_dist = document.createElement("h2_dist");
         var d = distTo;
         var distString;
         if(d > 1){
-            distString = (Math.round(d*10))/10 + " km"
+            distString = (Math.round(d*10))/10 + " km";
         } else {
-            distString = (Math.round(d*100))*10 + " m"
+            distString = (Math.round(d*100))*10 + " m";
         }
         h2_dist.textContent = distString;
 
@@ -121,14 +129,9 @@ addBike = function (bike, distTo) {
         a.href = href="begin_rental.html";
         a.appendChild(div)
         a.appendChild(h2_dist);
-        a.onclick = onClickFunction(bike, account);
+        a.addEventListener("click", function(){bs.view.findBike.handleSaveButtonClickEvent(bike)});
         a.href="homescreen_hasBike.html"
         section.appendChild(a);
     }
-
-    function onClickFunction(bike, account){
-        bike.setAvailable(false);
-        account.setBike = bike;
-        console.log("Bike: " + account.bike);
-    }
 }
+
