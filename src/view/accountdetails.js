@@ -8,6 +8,6 @@ bs.view.accountdetails = {
         document.getElementById("fullName").innerHTML = account.fullName;
         document.getElementById("email").innerHTML = account.email;
         document.getElementById("password").innerHTML = account.password;
-        document.getElementById("cardNumber").innerHTML = account.fullName;
+        document.getElementById("cardNumber").innerHTML = account.cardNumber;
     },
 };

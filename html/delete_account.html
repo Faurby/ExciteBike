@@ -4,6 +4,13 @@
         <title>ExciteBike</title>
         <link rel="stylesheet" type="text/css" href="../css/main.css">
     
+        <script src="../src/ctrl/initialize.js"></script>
+        <script src="../src/model/Account.js"></script>
+        <script src="../src/view/deleteaccount.js"></script>
+        <script>
+            window.addEventListener("load", bs.view.deleteaccount.setupUserInterface);
+        </script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -26,13 +33,13 @@
                         <div class="flexGrow1 height-100 bikeDetailsDeleteAccount">
                             <h2 class="h2">Are you sure you want to permanently delete your exciteBike account, </h2>
                             <br><br>
-                            <h2 class="h2"> john@xcite.com?</h2>
+                            <h2 id="email" class="h2"></h2>
                         </div>
                     </div>              
                 </section>
             </div>
             <div class="flexColumn width-100">
-                <a class="buttonRed margin-bottom-5 smallButton" href="delete_account.html">Delete account</a>
+                <a id="deleteButton" class="buttonRed margin-bottom-5 smallButton">Delete account</a>
                 <a class="buttonGrey margin-bottom-5 smallButton" href="javascript:history.go(-1)">No, take me back</a>
             </div>
         </main>
