@@ -53,7 +53,7 @@
 
 .height-100 label {
     font-size: $label-font-size;
-}
+} 
 
 .height-100 input {
     width: 70%;
@@ -70,6 +70,10 @@
 
 .flexGrow1 {
     flex-grow: 1;
+}
+
+.padding-top-50 {
+    padding-top: 50%;
 }
 
 .padding-bottom-10 {
@@ -139,6 +143,10 @@
 
 .greentext{
     color: $color-brand
+}
+
+.dark-greytext {
+    color: $color-secondary-shadow;
 }
 
 .infoBox h1{

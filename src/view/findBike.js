@@ -1,6 +1,13 @@
 bs.view.findBike = {
 
-    setupUserInterface: function () {
+    setupUserInterface: function () {        
+        let section = document.getElementById("bikeList");
+        let h2_load = document.createElement("h2_load");
+        h2_load.textContent = "Loading...";
+        h2_load.classList = "h2 padding-top-50 dark-greytext"
+        section.appendChild(h2_load)
+
+        
         // load all bike objects
         Bike.loadAll();
         keys = Object.keys( Bike.instances);
@@ -11,6 +18,8 @@ bs.view.findBike = {
                 console.log(`Longitude: ${position.coords.longitude}`);
                 console.log(`Latitude: ${position.coords.latitude}`);
                 
+                section.removeChild(h2_load);
+
                 for (i=0; i < keys.length; i++) {
                     key = keys[i];
                     var bike = Bike.instances[key]
@@ -49,13 +58,15 @@ bs.view.findBike = {
             
         } else { 
             console.log("Geolocation is not supported by this browser.");
+
+            section.removeChild(h2_load);
+
             for (i=0; i < keys.length; i++) {
                 key = keys[i];
                 var bike = Bike.instances[key]
                 addBike(bike, bike.distToUser);
             }
         }
-    
     },
 
 };
