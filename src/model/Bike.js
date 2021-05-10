@@ -3,7 +3,7 @@ function Bike(slots) {
     this.available = slots.available;
     this.x = slots.x;
     this.y = slots.y;
-    this.distToUser = "500 m"
+    this.distToUser = 0.5
     this.setDistance = function(dist) {
         this.distToUser = dist;
     }
@@ -47,10 +47,13 @@ Bike.saveAll = function () {
 Bike.createTestData = function () {
     Bike.instances["Bolt"] = new Bike({name:"Bolt", available:true, x:55.61, y:12.61});
     Bike.instances["Gazelle"] = new Bike({name:"Gazelle", available:true, x:55.64, y:12.62});
-    Bike.instances["Thunder"] = new Bike({name:"Thunder", available:true, x:55.6, y:12.60});
+    Bike.instances["Thunder"] = new Bike({name:"Thunder", available:true, x:55.41, y:12.34});
+    Bike.instances["Omega"] = new Bike({name:"Omega", available:true, x:55.39, y:12.45});
     Bike.instances["Winther"] = new Bike({name:"Winther", available:true, x:55.7, y:12.595});
     Bike.instances["Brunch"] = new Bike({name:"Brunch", available:true, x:55.65, y:12.60});
     Bike.instances["Tech"] = new Bike({name:"Tech", available:true, x:55.6605, y:12.59});
+    Bike.instances["Summer"] = new Bike({name:"Summer", available:true, x:55.41, y:12.34});
+    Bike.instances["Charger"] = new Bike({name:"Charger", available:true, x:55.64, y:12.64});
     Bike.saveAll();
 };
 

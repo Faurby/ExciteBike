@@ -11,14 +11,16 @@ bs.view.findBike = {
         // load all bike objects
         Bike.loadAll();
         keys = Object.keys( Bike.instances);
-        // for each bike, compute dist to user.
 
+        // for each bike, compute dist to user.
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 console.log(`Longitude: ${position.coords.longitude}`);
                 console.log(`Latitude: ${position.coords.latitude}`);
                 
                 section.removeChild(h2_load);
+                
+                var bikes = new Array;
 
                 for (i=0; i < keys.length; i++) {
                     key = keys[i];
@@ -40,20 +42,26 @@ bs.view.findBike = {
                                         Math.sin(dLon/2) * Math.sin(dLon/2);  
                         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
                         var d = R * c; 
-                        
-                        var distString;
-                        if(d > 1){
-                            distString = (Math.round(d*10))/10 + " km"
-                        } else {
-                            distString = (Math.round(d*100))*10 + " m"
-                        }
 
-                        bike.setDistance(distString)
-                        console.log(i + ": " + bike.name + ", dist: " + distString);
-                        addBike(bike, distString)
-                        
+                        bike.setDistance(d)
+                        console.log(i + ": " + bike.name + ", dist: " + d + "km");
+                        bikes[i] = bike;
                     }
                 }
+                
+                bikes.sort(function(x, y) {
+                    if (x.distToUser < y.distToUser) {
+                      return -1;
+                    }
+                    if (x.distToUser > y.distToUser) {
+                      return 1;
+                    }
+                    return 0;
+                });
+
+                bikes.forEach(function(bike, index, bikes){
+                    addBike(bike, bike.distToUser)
+                })
             });
             
         } else { 
@@ -94,7 +102,16 @@ addBike = function (bike, distTo) {
         div.appendChild(p); distTo
 
         let h2_dist = document.createElement("h2_dist");
-        h2_dist.textContent = distTo;
+
+        var d = distTo;
+        var distString;
+        if(d > 1){
+            distString = (Math.round(d*10))/10 + " km"
+        } else {
+            distString = (Math.round(d*100))*10 + " m"
+        }
+
+        h2_dist.textContent = distString;
 
         let a = document.createElement("a");
         a.className = "flexRow infoBoxBike";

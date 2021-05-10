@@ -1,0 +1,14 @@
+
+
+function compare_bike(a, b){
+        // a should come before b in the sorted order
+        if(a.bike < b.bike){
+                return -1;
+        // a should come after b in the sorted order
+        }else if(a.bike > b.bike){
+                return 1;
+        // and and b are the same
+        }else{
+                return 0;
+        }
+}
