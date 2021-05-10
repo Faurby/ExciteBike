@@ -173,6 +173,14 @@ table {
   margin-bottom: 5%;
 }
 
+.margin-bottom-10 {
+  margin-bottom: 10%;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20%;
+}
+
 .button-font-size {
   font-size: 50px;
 }
@@ -212,11 +220,16 @@ table {
 
 .header {
   background: linear-gradient(to bottom, #087F23 25%, #0C9C2C 25%);
+  position: fixed;
   height: 11%;
   padding-top: 6%;
   padding-left: 3%;
   padding-right: 3%;
   box-sizing: border-box;
+}
+
+.margin-top-header {
+  margin-top: 25%;
 }
 
 .headerimg {
@@ -269,6 +282,13 @@ table {
   padding: 0% 12%;
 }
 
+.infoBoxWhiteHasBike {
+  border-radius: 0.4em;
+  background-color: white;
+  text-align: center;
+  padding: 0% 12%;
+}
+
 .infoBoxBike {
   border-radius: 0.4em;
   background-color: white;
@@ -297,6 +317,14 @@ table {
   font-size: 16px;
 }
 
+.accountWrapper {
+  margin-top: 30%;
+}
+
+.accountDetails {
+  margin-bottom: 10%;
+}
+
 .accountBox {
   border-radius: 0.4em;
   background-color: white;
@@ -307,6 +335,117 @@ table {
 
 .deleteAccount {
   width: 65%;
+}
+
+.margin-bottom {
+  margin-bottom: 10%;
+}
+
+.infoBoxWhitexDeleteAccount {
+  border-radius: 0.4em;
+  background-color: white;
+  text-align: center;
+  margin-top: 2%;
+  padding: 3% 12%;
+}
+
+.margin-bottom-button {
+  margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 7%;
+    padding-top: 2%;
+  }
+
+  .height-100 input {
+    width: 40%;
+    margin: 1em 0em;
+    padding: 0.5em 0.5em;
+    border-radius: 0.4em;
+    background-color: #EBEBEB;
+    font-size: 16px;
+  }
+
+  .margin-top-header {
+    margin-top: 12%;
+  }
+
+  .profilelogo {
+    height: 50px;
+  }
+
+  .infoBoxWhite {
+    border-radius: 0.4em;
+    background-color: white;
+    text-align: center;
+    height: 26%;
+    padding: 0% 5%;
+  }
+
+  .infoboxH1 {
+    margin-bottom: 2%;
+  }
+
+  .padding-code {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+
+  .infoBoxWhiteHasBike {
+    border-radius: 0.4em;
+    background-color: white;
+    text-align: center;
+    height: 40%;
+    padding: 0% 5%;
+  }
+
+  .bikeDetails {
+    height: 60%;
+  }
+
+  .accountWrapper {
+    margin-top: 10%;
+  }
+
+  .accountWrapper .p {
+    font-size: 24px;
+  }
+
+  .margin-bottom {
+    margin-bottom: 3%;
+  }
+
+  .accountDetails {
+    margin-bottom: 5%;
+  }
+
+  .accountBox {
+    border-radius: 0.4em;
+    background-color: white;
+    text-align: center;
+    width: 60%;
+    padding: 2% 5%;
+  }
+
+  .infoBoxWhitexDeleteAccount {
+    border-radius: 0.4em;
+    background-color: white;
+    text-align: center;
+    height: 25%;
+    padding: 3% 5%;
+  }
+
+  .margin-bottom-button {
+    margin-bottom: 2%;
+  }
+
+  .smallButton {
+    font-size: 32px;
+    height: 3.2em;
+    line-height: 3.2em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
