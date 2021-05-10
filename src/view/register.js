@@ -5,10 +5,6 @@ bs.view.register = {
         Account.loadAll();
         // Set an event handler for the save/submit button
         saveButton.addEventListener("click", bs.view.register.handleSaveButtonClickEvent);
-        
-        window.addEventListener("beforeunload", function () {
-            Account.saveAll();
-        });
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['RegisterForm'];
@@ -22,6 +18,7 @@ bs.view.register = {
                           password: formEl.password.value};
 
             Account.add(slots);
+            Account.saveAll();
             window.location.href = 'paymentdetails.html'
 
         } else {

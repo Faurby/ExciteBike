@@ -5,10 +5,6 @@ bs.view.paymentdetails = {
         Account.loadAll();
         // Set an event handler for the save/submit button
         saveButton.addEventListener("click", bs.view.paymentdetails.handleSaveButtonClickEvent);
-
-        window.addEventListener("beforeunload", function () {
-            Account.saveAll();
-        });
     },
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['PaymentDetailsForm'];
@@ -21,6 +17,8 @@ bs.view.paymentdetails = {
                       cvc: formEl.cvc.value};
 
         Account.update(slots);
+        Account.saveAll();
+        
         localStorage.setItem("currentAccountEmail", email);
         window.location.href = 'welcome.html'
     }

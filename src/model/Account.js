@@ -1,12 +1,12 @@
 function Account(slots) {
     this.email = slots.email;
     this.password = slots.password;
-    this.fullName = null;
-    this.cardNumber = null;
-    this.expiryDate = null;
-    this.cvc = null;
-    this.bike = null;
-    this.rentStart = null;
+    this.fullName = slots.fullName;
+    this.cardNumber = slots.cardNumber;
+    this.expiryDate = slots.expiryDate;
+    this.cvc = slots.cvc;
+    this.bike = slots.bike;
+    this.rentStart = slots.rentStart;
     
     this.setFullName = function(fullName) {
         this.fullName = fullName;
@@ -14,8 +14,8 @@ function Account(slots) {
     this.setCardNumber = function(cardNumber) {
         this.cardNumber = cardNumber;
     };
-    this.setExpiryDate = function(setExpiryDate) {
-        this.setExpiryDate = setExpiryDate;
+    this.setExpiryDate = function(expiryDate) {
+        this.expiryDate = expiryDate;
     };
     this.setCVC = function(cvc) {
         this.cvc = cvc;
