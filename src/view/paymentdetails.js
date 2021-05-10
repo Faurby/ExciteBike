@@ -27,8 +27,8 @@ bs.view.paymentdetails = {
                       cvc: cvc};
 
         Account.update(slots);
-
-        alert("What?! "+email+" "+Account.getAccount(email).cardNumber);
+        //TODO After updating the account it can't be retrieved anymore :(
+        //Dont know whats wrong
 
         localStorage.setItem("currentAccountEmail", email);
         window.location.href = 'welcome.html'
