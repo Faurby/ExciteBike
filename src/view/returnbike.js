@@ -3,6 +3,7 @@ eb.view.returnbike = {
         var confirmButton = document.getElementById("confirmButton");
         // load all account objects
         Account.loadAll();
+        Bike.loadAll();
         // Set an event handler for the save/submit button
         confirmButton.addEventListener("click", eb.view.returnbike.handleSaveButtonClickEvent);
     },
@@ -12,6 +13,7 @@ eb.view.returnbike = {
         bike.setAvailable(true);
         account.setBike(null);
         Account.saveAll();
+        Bike.saveAll();
         alert("Removed bike!")
     }
 };

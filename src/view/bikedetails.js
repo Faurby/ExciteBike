@@ -1,7 +1,7 @@
 eb.view.bikedetails = {
     setupUserInterface: function () {
                 
-        // load all account objects
+        // load all account/bike objects
         Account.loadAll();
         Bike.loadAll();
 
@@ -10,7 +10,7 @@ eb.view.bikedetails = {
         updateTime(account);
         const interval = setInterval(function() {
             updateTime(account);
-        }, 1000);
+        }, 250);
     }
 };
 
