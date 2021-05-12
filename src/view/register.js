@@ -9,20 +9,29 @@ eb.view.register = {
     handleSaveButtonClickEvent: function () {
         var formEl = document.forms['RegisterForm'];
 
+        var email = formEl.email.value;
         var password = formEl.password.value
         var passwordAgain = formEl.passwordAgain.value
 
-        if (password == passwordAgain) {
+        if (!isEmpty(email) && !isEmpty(password)) {
+            if (password == passwordAgain) {
             
-            var slots = { email: formEl.email.value,
-                          password: formEl.password.value};
-
-            Account.add(slots);
-            Account.saveAll();
-            window.location.href = 'payment_details.html'
-
+                var slots = { email: formEl.email.value,
+                              password: formEl.password.value};
+    
+                Account.add(slots);
+                Account.saveAll();
+                window.location.href = 'payment_details.html'
+    
+            } else {
+                alert("Passwords do not match!")
+            }
         } else {
-            alert("Passwords do not match!")
+            alert("Please complete the registration!")
         }
     }
 };
+
+function isEmpty(str) {
+    return (!str || str.length === 0 );
+}
