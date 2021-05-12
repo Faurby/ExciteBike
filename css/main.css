@@ -523,6 +523,10 @@ table {
     font-size: 16px;
   }
 
+  .accountWrapper {
+    margin-top: 5%;
+  }
+
   .profilelogo {
     height: 70px;
   }
@@ -586,6 +590,10 @@ table {
   .accountBox {
     width: 26%;
     padding: 1% 2%;
+  }
+
+  .accountDetails {
+    margin-bottom: 5%;
   }
 
   .margin-top-header-help {
