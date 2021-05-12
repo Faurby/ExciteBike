@@ -23,7 +23,10 @@ function updateTime(account) {
 
     var date = new Date(then);
 
-    document.getElementById("rentStart").innerHTML = date.toTimeString().substring(0, 6);
+    var totalPrice = parseInt(diff / 1000 / 60);
+
+    document.getElementById("totalPrice").innerHTML = "Total price: "+totalPrice+" DKK";
+    document.getElementById("rentStart").innerHTML = date.toTimeString().substring(0, 5);
     document.getElementById("timeRented").innerHTML = msToTime(diff);
     document.getElementById("bikeName").innerHTML = account.bike.name;
 }
