@@ -48,7 +48,6 @@ eb.view.findbike = {
                         var d = R * c; 
 
                         bike.setDistance(d);
-                        console.log(i + ": " + bike.name + ", dist: " + d + "km");
                         bikes[i] = bike;
                     }
                 }
@@ -83,6 +82,7 @@ eb.view.findbike = {
 
     handleSaveButtonClickEvent: function(bike) {
         localStorage.setItem("currentlySelectedBike", bike.name);
+        localStorage.setItem("currentlySelectedBikeDist", bike.distToUser)
     }
 };
 
