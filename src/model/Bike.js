@@ -64,11 +64,13 @@ Bike.createTestData = function () {
     Bike.instances["Thunder"] = new Bike({name:"Thunder", available:true, x:55.68, y:12.54});
     Bike.instances["Omega"] = new Bike({name:"Omega", available:true, x:55.7, y:12.58});
     Bike.instances["Winther"] = new Bike({name:"Winther", available:true, x:55.7, y:12.595});
+    Bike.instances["Smiles"] = new Bike({name:"Smiles", available:true, x:55.69, y:12.605});
     Bike.instances["Brunch"] = new Bike({name:"Brunch", available:true, x:55.65, y:12.60});
     Bike.instances["Tech"] = new Bike({name:"Tech", available:true, x:55.6605, y:12.59});
     Bike.instances["Summer"] = new Bike({name:"Summer", available:true, x:55.64, y:12.55});
     Bike.instances["Charger"] = new Bike({name:"Charger", available:true, x:55.64, y:12.62});
     Bike.instances["Sport"] = new Bike({name:"Sport", available:true, x:55.68, y:12.61});
+    Bike.instances["Rudolph"] = new Bike({name:"Rudolph", available:true, x:55.65, y:12.545});
     Bike.saveAll();
 };
 
