@@ -5,7 +5,7 @@ eb.view.accountdetails = {
         Account.loadAll();
 
         var account = Account.getCurrentAccount();
-        document.getElementById("username").innerHTML = account.email;
+        document.getElementById("name").innerHTML = account.fullname;
         document.getElementById("fullName").innerHTML = account.fullName;
         document.getElementById("email").innerHTML = account.email;
         document.getElementById("password").innerHTML = account.password;
