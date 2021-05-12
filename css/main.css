@@ -353,6 +353,10 @@ table {
   margin-bottom: 5%;
 }
 
+.margin-top-header-help {
+  margin-top: 35%;
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     height: 7%;
@@ -449,6 +453,10 @@ table {
     font-size: 32px;
     height: 3.2em;
     line-height: 3.2em;
+  }
+
+  .margin-top-header-help {
+    margin-top: 15%;
   }
 }
 
