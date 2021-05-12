@@ -231,7 +231,7 @@
 
 .bikeDetails {
     padding-top: 10%;
-    padding-bottom: 40%;
+    padding-bottom: 10%;
 }
 
 .cardLabel label{
@@ -244,6 +244,10 @@
 
 .accountDetails {
     margin-bottom: 10%;
+}
+
+.accountDetails .h3 {
+    margin-bottom: 1%;
 }
 
 .accountBox {
@@ -293,6 +297,14 @@
 
 .margin-welcome {
     margin-top: 20%;
+}
+
+.infoboxH1 {
+    margin-bottom: 2%;
+}
+
+.bikeDetails .greentext {
+    margin-bottom: 30%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -525,7 +537,6 @@
     .infoBoxWhitexDeleteAccount {
         width: 50%;
     }
-    
         
     .paymentMargin {
         margin-top: 2%;
