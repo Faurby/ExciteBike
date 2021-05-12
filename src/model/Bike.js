@@ -58,6 +58,7 @@ Bike.saveAll = function () {
 };
 
 Bike.createTestData = function () {
+    localStorage["bikeTable"] = "{}"
     Bike.instances["Bolt"] = new Bike({name:"Bolt", available:true, x:55.67, y:12.61});
     Bike.instances["Gazelle"] = new Bike({name:"Gazelle", available:true, x:55.64, y:12.57});
     Bike.instances["Thunder"] = new Bike({name:"Thunder", available:true, x:55.68, y:12.54});
@@ -67,12 +68,11 @@ Bike.createTestData = function () {
     Bike.instances["Tech"] = new Bike({name:"Tech", available:true, x:55.6605, y:12.59});
     Bike.instances["Summer"] = new Bike({name:"Summer", available:true, x:55.64, y:12.55});
     Bike.instances["Charger"] = new Bike({name:"Charger", available:true, x:55.64, y:12.62});
+    Bike.instances["Sport"] = new Bike({name:"Sport", available:true, x:55.68, y:12.61});
     Bike.saveAll();
 };
 
-if (localStorage.getItem("bikeTable") === null) {
-    Bike.createTestData();
-}
+Bike.createTestData();
 
 bikeTableString = localStorage["bikeTable"];
 bikeTable = JSON.parse( bikeTableString);
@@ -80,5 +80,3 @@ Bike.convertRow2Obj = function (bikeRow) {
     var bike = new Bike( bikeRow);
     return bike;
 };
-
-Bike.createTestData();
