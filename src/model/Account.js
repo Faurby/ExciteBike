@@ -113,13 +113,16 @@ Account.createTestData = function () {
 };
 
 Account.attemptLogin = function (email, password) {
-    var account = Account.instances[email]
+    
+    if (!isEmpty(email) && !isEmpty(password)) {
 
-    if (account) {
-        if (account.password == password) {
-            localStorage.setItem("currentAccountEmail", account.email);
-            window.location.href = 'find_bike.html'
-            return;
+        var account = Account.instances[email]
+        if (account) {
+            if (account.password == password) {
+                localStorage.setItem("currentAccountEmail", account.email);
+                window.location.href = 'find_bike.html'
+                return;
+            }
         }
     }
     alert("Failed to login!");
@@ -135,3 +138,7 @@ Account.convertRow2Obj = function (accountRow) {
     var account = new Account( accountRow);
     return account;
 };
+
+function isEmpty(str) {
+    return (!str || str.length === 0 );
+}

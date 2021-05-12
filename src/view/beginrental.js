@@ -7,6 +7,7 @@ eb.view.beginrental = {
 
         // load all account objects
         Account.loadAll();
+        Bike.loadAll();
         // Set an event handler for the save/submit button
         confirmButton.addEventListener("click", eb.view.beginrental.handleSaveButtonClickEvent);
     },
@@ -20,7 +21,7 @@ eb.view.beginrental = {
         account.setBike(bike);
 
         var date = new Date();
-        account.setRentStart(date.getTime);
+        account.setRentStart(date.getTime());
 
         Bike.saveAll();
         Account.saveAll();
