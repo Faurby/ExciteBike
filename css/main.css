@@ -458,6 +458,52 @@ table {
   .margin-top-header-help {
     margin-top: 15%;
   }
+
+  .margin-top-header-help .p {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .index-button {
+    width: 30%;
+    margin-bottom: 1%;
+  }
+
+  .index-button2 {
+    width: 30%;
+    margin-bottom: 3%;
+  }
+
+  .headerarrow {
+    visibility: hidden;
+  }
+
+  .header {
+    height: 10%;
+    padding-top: 1.6%;
+  }
+
+  .height-100 input {
+    width: 20%;
+    margin: 1em 0em;
+    padding: 0.5em 0.5em;
+    border-radius: 0.4em;
+    background-color: #EBEBEB;
+    font-size: 16px;
+  }
+
+  .profilelogo {
+    height: 70px;
+  }
+
+  .headerimg {
+    height: 80px;
+  }
+
+  .username {
+    visibility: visible;
+    margin-right: 4%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -381,4 +381,54 @@
     .margin-top-header-help {
         margin-top: 15%;
     }
+
+    .margin-top-header-help .p  {
+        font-size: $medium-font-size;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .index-button {
+        width: 30%;
+        margin-bottom: 1%;
+    }
+
+    .index-button2 {
+        width: 30%;
+        margin-bottom: 3%;
+    }
+
+    .headerarrow {
+        visibility: hidden;
+    }
+
+    .header {
+        height: 10%;
+        padding-top: 1.6%;
+    }
+
+    .height-100 input {
+        width: 20%;
+        margin: 1em 0em;
+        padding: 0.5em 0.5em;
+        border-radius: $button-radius;
+        background-color: $color-background-darker;
+        font-size: $base-font-size;
+    }
+
+    .profilelogo {
+        height: 70px;
+
+    }
+
+    .headerimg {
+        height: 80px;
+    }
+
+    .username {
+        visibility: visible;
+        margin-right: 4%;
+    }
+
 }
