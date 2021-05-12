@@ -268,7 +268,6 @@ table {
 }
 
 .infoBoxBikes {
-  overflow: scroll;
   height: 90%;
   justify-content: flex-start;
   gap: 2%;
@@ -503,6 +502,22 @@ table {
 
   .headerimg {
     height: 65px;
+  }
+
+  .margin-top-header {
+    margin-top: 10%;
+  }
+
+  .infoBoxBikes {
+    gap: 1%;
+    flex-wrap: wrap;
+    height: 50%;
+    align-content: center;
+  }
+
+  .infoBoxBike {
+    padding: 2% 2%;
+    width: 30%;
   }
 }
 

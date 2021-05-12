@@ -185,7 +185,6 @@
 }
 
 .infoBoxBikes {
-    overflow: scroll;
     height: 90%;
     //padding-top: 5%;
     justify-content: flex-start;
@@ -428,5 +427,21 @@
 
     .headerimg {
         height: 65px;
+    }
+
+    .margin-top-header {
+        margin-top: 10%;
+    }
+
+    .infoBoxBikes {
+        gap: 1%;
+        flex-wrap: wrap;
+        height: 50%;
+        align-content: center;
+    }
+
+    .infoBoxBike {
+        padding: 2% 2%;
+        width: 30%;
     }
 }
