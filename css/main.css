@@ -360,6 +360,18 @@ table {
   display: none;
 }
 
+.customerImg {
+  display: none;
+}
+
+.paymentMargin {
+  margin-top: 10%;
+}
+
+.margin-welcome {
+  margin-top: 20%;
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     height: 7%;
@@ -465,6 +477,10 @@ table {
   .margin-top-header-help .p {
     font-size: 24px;
   }
+
+  .paymentMargin {
+    margin-top: 3%;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .index-button {
@@ -546,11 +562,56 @@ table {
 
   .margin-welcome {
     margin-top: 5%;
+    padding-bottom: 0%;
+    margin-bottom: 2%;
   }
 
   .margin-return {
     padding-bottom: 0%;
     margin-bottom: 1%;
+  }
+
+  .accountBox {
+    width: 26%;
+    padding: 1% 2%;
+  }
+
+  .margin-top-header-help {
+    margin-top: 10%;
+  }
+
+  .margin-help {
+    margin-bottom: 1%;
+  }
+
+  .ContactusImg {
+    width: 100%;
+  }
+
+  .contactUsWrapper {
+    margin-bottom: auto;
+  }
+
+  .customerImg {
+    display: block;
+    height: 350px;
+  }
+
+  .infoBoxWhitexDeleteAccount {
+    width: 50%;
+  }
+
+  .paymentMargin {
+    margin-top: 2%;
+  }
+
+  .welcome-text {
+    padding: 0% 30%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .customerImg {
+    height: 500px;
   }
 }
 
