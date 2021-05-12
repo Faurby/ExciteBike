@@ -280,6 +280,10 @@
     margin-top: 35%;
 }
 
+.username {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
     .header {
         height: 7%;
@@ -419,16 +423,10 @@
 
     .profilelogo {
         height: 70px;
-
+        padding-left: 0%;
     }
 
     .headerimg {
-        height: 80px;
+        height: 65px;
     }
-
-    .username {
-        visibility: visible;
-        margin-right: 4%;
-    }
-
 }
