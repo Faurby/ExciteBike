@@ -356,7 +356,7 @@ table {
   margin-top: 35%;
 }
 
-.username {
+.bikeimg {
   display: none;
 }
 
@@ -483,7 +483,7 @@ table {
 
   .header {
     height: 10%;
-    padding-top: 1.6%;
+    padding-top: 1.7%;
   }
 
   .height-100 input {
@@ -497,7 +497,6 @@ table {
 
   .profilelogo {
     height: 70px;
-    padding-left: 0%;
   }
 
   .headerimg {
@@ -518,6 +517,39 @@ table {
   .infoBoxBike {
     padding: 2% 2%;
     width: 30%;
+  }
+
+  .bikeimg {
+    display: block;
+    height: 300px;
+    margin-bottom: 11%;
+  }
+
+  .infoboxWithImg {
+    width: 30%;
+    height: 65%;
+  }
+
+  .bikeDetails .greentext {
+    margin-bottom: 5%;
+  }
+
+  .padding-code {
+    margin-top: 1%;
+    margin-bottom: 3%;
+  }
+
+  .margin-rental {
+    margin-top: 10%;
+    padding-bottom: 4%;
+  }
+
+  .margin-welcome {
+    margin-top: 5%;
+  }
+
+  .margin-return {
+    padding-bottom: 0%;
   }
 }
 
