@@ -267,8 +267,11 @@ table {
   font-size: 16px;
 }
 
+.bikeSection {
+  height: 50%;
+}
+
 .infoBoxBikes {
-  justify-content: flex-start;
   gap: 2%;
   box-sizing: border-box;
 }
@@ -391,6 +394,14 @@ table {
 @media only screen and (max-width: 768px) {
   .h2 {
     font-size: 21.3333333333px;
+  }
+
+  .infoBoxBikes {
+    justify-content: flex-start;
+  }
+
+  .bikeSection {
+    margin-bottom: 40%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -552,6 +563,7 @@ table {
   .infoBoxBikes {
     gap: 1%;
     flex-wrap: wrap;
+    flex-direction: row;
     align-content: center;
   }
 
