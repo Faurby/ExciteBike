@@ -1,13 +1,17 @@
 eb.view.rentalcode = {
     setupUserInterface: function () {
         var confirmButton = document.getElementById("confirmButton");
+        var logoButton = document.getElementById("logo");
 
         // load all account/bike objects
         Account.loadAll();
         Bike.loadAll();
 
-        // Set an event handler for the save/submit button
-        confirmButton.addEventListener("click", eb.view.rentalcode.handleSaveButtonClickEvent);
+        // Set an event handler for the confirmButton
+        confirmButton.addEventListener("click", eb.view.rentalcode.handleConfirmButtonClickEvent);
+
+        // Set an event handler for the logoButton
+        logoButton.addEventListener("click", eb.view.rentalcode.handleLogoButtonClickEvent);
 
         var date = new Date();
         var now = date.getTime();
@@ -16,13 +20,12 @@ eb.view.rentalcode = {
             updateTime(now);
         }, 250);
     },
-    handleSaveButtonClickEvent: function () {
+    handleConfirmButtonClickEvent: function () {
         var bikeName = localStorage.getItem("currentlySelectedBike");
 
         var bike = Bike.getBike(bikeName);
         var account = Account.getCurrentAccount();
 
-        bike.setAvailable(false);
         account.setBike(bike);
 
         var date = new Date();
@@ -30,6 +33,15 @@ eb.view.rentalcode = {
 
         Bike.saveAll();
         Account.saveAll();
+    },
+    handleLogoButtonClickEvent: function () {
+        var account = Account.getCurrentAccount();
+
+        if (account.bike != null) {
+            window.location.href = 'bike_details.html'
+        } else {
+            window.location.href = 'find_bike.html'
+        }
     }
 };
 

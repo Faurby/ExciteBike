@@ -3,10 +3,10 @@ eb.view.register = {
         var registerButton = document.getElementById("registerButton");
         // load all account objects
         Account.loadAll();
-        // Set an event handler for the save/submit button
-        registerButton.addEventListener("click", eb.view.register.handleSaveButtonClickEvent);
+        // Set an event handler for the registerButton
+        registerButton.addEventListener("click", eb.view.register.handleRegisterButtonClickEvent);
     },
-    handleSaveButtonClickEvent: function () {
+    handleRegisterButtonClickEvent: function () {
         var formEl = document.forms['RegisterForm'];
 
         var email = formEl.email.value;

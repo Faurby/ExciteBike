@@ -483,7 +483,7 @@
     }
 
     .headerimg {
-        height: 65px;
+        height: 100%;
     }
 
     .margin-top-header {
@@ -558,7 +558,8 @@
 
     .customerImg {
         display: block;
-        height: 350px;
+        height: 250px;
+        margin-bottom: 5%;
     }
 
     .infoBoxWhitexDeleteAccount {
@@ -604,6 +605,7 @@
 @media only screen and (min-width: 1920px) {
     .customerImg {
         height: 500px;
+        margin-bottom: 5%;
     }
 
     .padding-top {

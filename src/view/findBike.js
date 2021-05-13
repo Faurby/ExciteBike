@@ -8,7 +8,7 @@ eb.view.findbike = {
         let section = document.getElementById("bikeList");
         let h2_load = document.createElement("h2_load");
         h2_load.textContent = "Loading...";
-        h2_load.classList = "h2 padding-top-50 dark-greytext"
+        h2_load.classList = "h2 padding-top dark-greytext"
         section.appendChild(h2_load)
 
         
@@ -94,37 +94,35 @@ addBike = function (bike, distTo) {
 
     let section = document.getElementById("bikeList");
 
-    if(bike.available = true){
-        let h2 = document.createElement("h2");
-        h2.className = "h2";
-        h2.textContent = bike.name;
-        
-        let p = document.createElement("p");
-        p.className = "p";
-        p.textContent = "1 DKK/min";
+    let h2 = document.createElement("h2");
+    h2.className = "h2";
+    h2.textContent = bike.name;
+    
+    let p = document.createElement("p");
+    p.className = "p";
+    p.textContent = "1 DKK/min";
 
-        let div = document.createElement("div");
-        div.className = "leftalignText";
-        div.appendChild(h2);
-        div.appendChild(p); 
+    let div = document.createElement("div");
+    div.className = "leftalignText";
+    div.appendChild(h2);
+    div.appendChild(p); 
 
-        let h2_dist = document.createElement("h2_dist");
-        var d = distTo;
-        var distString;
-        if(d > 1){
-            distString = (Math.round(d*10))/10 + " km";
-        } else {
-            distString = (Math.round(d*100))*10 + " m";
-        }
-        h2_dist.textContent = distString;
-
-        let a = document.createElement("a");
-        a.className = "flexRow infoBoxBike";
-        a.appendChild(div)
-        a.appendChild(h2_dist);
-        a.addEventListener("click", function(){eb.view.findbike.handleSaveButtonClickEvent(bike)});
-        a.href="begin_rental.html"
-        section.appendChild(a);
+    let h2_dist = document.createElement("h2_dist");
+    var d = distTo;
+    var distString;
+    if(d > 1){
+        distString = (Math.round(d*10))/10 + " km";
+    } else {
+        distString = (Math.round(d*100))*10 + " m";
     }
+    h2_dist.textContent = distString;
+
+    let a = document.createElement("a");
+    a.className = "flexRow infoBoxBike";
+    a.appendChild(div)
+    a.appendChild(h2_dist);
+    a.addEventListener("click", function(){eb.view.findbike.handleSaveButtonClickEvent(bike)});
+    a.href="begin_rental.html"
+    section.appendChild(a);
 }
 

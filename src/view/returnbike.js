@@ -1,19 +1,31 @@
 eb.view.returnbike = {
     setupUserInterface: function () {
         var confirmButton = document.getElementById("confirmButton");
-        // load all account objects
+        var logoButton = document.getElementById("logo");
+
+        // load all account/bike objects
         Account.loadAll();
         Bike.loadAll();
-        // Set an event handler for the save/submit button
-        confirmButton.addEventListener("click", eb.view.returnbike.handleSaveButtonClickEvent);
+
+        // Set an event handler for the confirmButton
+        confirmButton.addEventListener("click", eb.view.returnbike.handleConfirmButtonClickEvent);
+
+        // Set an event handler for the logoButton
+        logoButton.addEventListener("click", eb.view.returnbike.handleLogoButtonClickEvent);
     },
-    handleSaveButtonClickEvent: function () {
+    handleConfirmButtonClickEvent: function () {
         var account = Account.getCurrentAccount();
-        var bike = account.bike;
-        bike.setAvailable(true);
         account.setBike(null);
         Account.saveAll();
         Bike.saveAll();
-        alert("Removed bike!")
+    },
+    handleLogoButtonClickEvent: function () {
+        var account = Account.getCurrentAccount();
+
+        if (account.bike != null) {
+            window.location.href = 'bike_details.html'
+        } else {
+            window.location.href = 'find_bike.html'
+        }
     }
 };

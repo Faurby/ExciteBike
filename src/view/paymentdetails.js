@@ -3,10 +3,10 @@ eb.view.paymentdetails = {
         var confirmButton = document.getElementById("confirmButton");
         // load all account objects
         Account.loadAll();
-        // Set an event handler for the save/submit button
-        confirmButton.addEventListener("click", eb.view.paymentdetails.handleSaveButtonClickEvent);
+        // Set an event handler for the confirmButton
+        confirmButton.addEventListener("click", eb.view.paymentdetails.handleConfirmButtonClickEvent);
     },
-    handleSaveButtonClickEvent: function () {
+    handleConfirmButtonClickEvent: function () {
         var formEl = document.forms['PaymentDetailsForm'];
         var email = localStorage.getItem("emailToBeRegistered");
 
