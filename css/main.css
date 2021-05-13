@@ -437,7 +437,11 @@ table {
   }
 
   .bikeDetails {
-    height: 60%;
+    height: 20%;
+  }
+
+  .bikeDetails .greentext {
+    margin-bottom: 24%;
   }
 
   .accountWrapper {
@@ -494,7 +498,7 @@ table {
     margin-top: 3%;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1280px) {
   .index-button {
     width: 30%;
     margin-bottom: 1%;
@@ -546,24 +550,22 @@ table {
     align-content: center;
   }
 
+  .infoBoxWhiteHasBike {
+    height: 45%;
+    padding: 0% 5%;
+  }
+
+  .infoBoxWhite {
+    height: 35%;
+  }
+
   .infoBoxBike {
     padding: 2% 2%;
     width: 30%;
   }
 
-  .bikeimg {
-    display: block;
-    height: 300px;
-    margin-bottom: 11%;
-  }
-
-  .infoboxWithImg {
-    width: 30%;
-    height: 65%;
-  }
-
   .bikeDetails .greentext {
-    margin-bottom: 5%;
+    margin-bottom: 15%;
   }
 
   .padding-code {
@@ -627,6 +629,16 @@ table {
 
   .welcome-text {
     padding: 0% 30%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .bikeimg {
+    display: block;
+    height: 250px;
+  }
+
+  .infoboxWithImg {
+    height: 65%;
   }
 }
 @media only screen and (min-width: 1920px) {
