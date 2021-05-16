@@ -380,7 +380,7 @@ table {
 }
 
 .margin-welcome {
-  margin-top: 20%;
+  margin-top: 1%;
 }
 
 .infoboxH1 {
@@ -402,6 +402,10 @@ table {
 
   .bikeSection {
     margin-bottom: 40%;
+  }
+
+  .margin-welcome {
+    margin-top: 20%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -588,12 +592,6 @@ table {
   .margin-rental {
     margin-top: 10%;
     padding-bottom: 4%;
-  }
-
-  .margin-welcome {
-    margin-top: 5%;
-    padding-bottom: 0%;
-    margin-bottom: 2%;
   }
 
   .margin-return {

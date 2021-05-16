@@ -187,7 +187,6 @@
 }
 
 .infoBoxBikes {
-    //padding-top: 5%;
     gap: 2%;
     box-sizing: border-box;
 }
@@ -301,7 +300,7 @@
 }
 
 .margin-welcome {
-    margin-top: 20%;
+    margin-top: 1%;
 }
 
 .infoboxH1 {
@@ -323,6 +322,10 @@
 
     .bikeSection {
         margin-bottom: 40%;
+    }
+
+    .margin-welcome {
+        margin-top: 20%;
     }
 }
 
@@ -441,11 +444,6 @@
 
 @media only screen and (min-width: 1280px) {
 
-    //body {
-        //background-image: url(../img/blurryCopenhagen.jpg);
-        //background-size:
-    //}
-
     .index-button {
         width: 30%;
         margin-bottom: 1%;
@@ -520,12 +518,6 @@
         padding-bottom: 4%;
     }
 
-    .margin-welcome {
-        margin-top: 5%;
-        padding-bottom: 0%;
-        margin-bottom: 2%;
-    }
-
     .margin-return {
         padding-bottom: 0%;
         margin-bottom: 1%;
@@ -598,9 +590,6 @@
         padding-top: 5%;
     }
 }
-
-
-
 
 @media only screen and (min-width: 1920px) {
     .customerImg {
