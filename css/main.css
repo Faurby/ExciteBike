@@ -380,7 +380,7 @@ table {
 }
 
 .margin-welcome {
-  margin-top: 1%;
+  margin-top: 5%;
 }
 
 .infoboxH1 {
@@ -406,6 +406,7 @@ table {
 
   .margin-welcome {
     margin-top: 20%;
+    margin-bottom: 5%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -517,6 +518,11 @@ table {
 
   .paymentMargin {
     margin-top: 3%;
+  }
+
+  .margin-welcome {
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -639,7 +645,7 @@ table {
   }
 
   .welcome-text {
-    padding: 0% 30%;
+    padding: 5% 30%;
   }
 
   .accountDetails .h3 {
@@ -648,6 +654,11 @@ table {
 
   .padding-top {
     padding-top: 5%;
+  }
+
+  .margin-welcome {
+    margin-top: 5%;
+    margin-bottom: 0%;
   }
 }
 @media only screen and (min-width: 1440px) {
